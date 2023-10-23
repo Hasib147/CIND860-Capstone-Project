@@ -1,1 +1,73 @@
 .ipynb file of CIND860 capstone project. (Fashion MNIST)
+
+!pip install pydantic
+!pip install PyYAML
+!pip install jinja2
+!pip install visions
+!pip install htmlmin
+!pip install phik
+!pip install requests
+!pip install tqdm
+!pip install seaborn
+!pip install multimethod
+!pip install statsmodels
+!pip install typeguard
+!pip install imagehash
+!pip install wordcloud
+!pip install dacite
+!pip install numba
+
+
+from google.colab import files
+file_upload_test = files.upload()  <-- to import the test file of Fashion MNIST
+
+Once it's uploaded, then:
+
+import pandas as pd
+
+fashion_test_file = "fashion-mnist_test.csv"
+data_fashion_test = pd.read_csv(fashion_test_file, sep = ',', header=0)
+
+display(data_fashion_test)
+
+import pandas as pd
+
+# Load your dataset from the CSV file
+fashion_test_file = "fashion-mnist_test.csv"
+data_fashion_test = pd.read_csv(fashion_test_file, sep=',', header=0)
+
+# Separate the features (pixels) and the target variable (labels)
+X_test = data_fashion_test.iloc[:, 1:]  # Features
+
+
+# Calculate the variances of each pixel
+variances = X_test.var()
+
+# Sort the variances in descending order and get the top 50 pixel names
+selected_feature_names = variances.sort_values(ascending=False).head(50).index
+
+# Create a new DataFrame with only the selected features
+selected_features_test_df = X_test[selected_feature_names]
+
+# Now, 'selected_features_test_df' contains the 50 pixels with the highest variances
+
+selected_features_test_df ---> this code should display the ten pixels with highest variance
+
+import pandas as pd
+
+# Load your dataset from the CSV file
+fashion_test_file = "fashion-mnist_test.csv"
+data_fashion_test = pd.read_csv(fashion_test_file, sep=',', header=0)
+
+# Separate the features (pixels) and the target variable (labels)
+X_test = data_fashion_test.iloc[:, 1:]  # Features
+y_test = data_fashion_test.iloc[:, 0]   # Labels
+
+# Calculate the variances of each pixel
+variances = X_test.var()
+
+# Sort the variances in descending order and get the top 50 pixel names
+top_10_pixels = variances.sort_values(ascending=False).head(10)
+
+# Display the names and variances of the top 10 pixels
+print(top_10_pixels)   ---> this command prints the top 10 pixels according to variance.
