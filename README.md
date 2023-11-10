@@ -15,3 +15,8 @@ and the other was combined between train & test - 70k rows) for the top 20 pixel
 *** The main .csv file that the .ipynb file was read from was the "combined_top_20_pixels_with_labels.csv" consisiting of 70,000 rows with 21 columns (column 1 being the dependent variable, the other
 20 columns being the top 20 pixels) and the main pandaprofiling report was "combined_top_20_pixels_report.html" where the EDA was done. However, I attached the pandarprofiling report for both the training &
 testing set for top 20 pixels in .csv format as well as the pandaprofiling report for extra reference.
+
+
+
+The "Initial Results & Code [FINAL DRAFT].docx" is the word document containing the screenshot of the code along with the explanations and the results that were given in the output and 
+"CIND860_InitialResults_Code.ipynb" is the official .ipynb notebook of the code for the initial results of this project. This was done on Google colab (using GPU runtime) and may not work with other editors.
