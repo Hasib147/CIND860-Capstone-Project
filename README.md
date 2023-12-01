@@ -20,3 +20,8 @@ testing set for top 20 pixels in .csv format as well as the pandaprofiling repor
 
 The "Initial Results & Code [FINAL DRAFT].docx" is the word document containing the screenshot of the code along with the explanations and the results that were given in the output and 
 "CIND860_InitialResults_Code.ipynb" is the official .ipynb notebook of the code for the initial results of this project. This was done on Google colab (using GPU runtime) and may not work with other editors.
+
+
+This is the very large file which I could not uplaod directly to GitHub for my final report (.ipynb file - over 50 MB). This is my overall final code (a buildup from the initial results section) for my CIND860 capstone
+project taken in Fall 2023 at TMU.
+https://colab.research.google.com/drive/1BAvID4fpZP01tbQDNugfxKreRhfLjKtQ?usp=drive_link
